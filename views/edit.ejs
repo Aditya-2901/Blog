@@ -1,0 +1,18 @@
+<%- include('./partials/header') %>
+<div class="  container ">
+    <div class="jumbotron">
+        <h3>
+            Edit <%= blog.title %>
+        </h3>
+    </div>
+
+    <form action="/blogs/<%=blog._id %>?_method=PUT" method=POST>
+        <div> <input type="text" class="form-control"         name="blog[title]"  value="<%= blog.title %>"   placeholder="Title"></div><br>
+         <div><input type="text" class="form-control"         name="blog[image]" value="<%= blog.image %>" placeholder="Image Url"></div><br>
+          <div> <textarea type= "text"  class="form-control"  name="blog[body]"  > </textarea></div>
+         <button>
+             Update
+         </button>
+     </form>
+</div>
+<%- include('./partials/footer') %>

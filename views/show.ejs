@@ -1,0 +1,34 @@
+<%- include('./partials/header') %>
+<div class="container">
+    <div class="jumbotron">
+
+        <h2>
+            <%= blog.title %>
+        </h2>
+
+    </div>
+    <div class="container border border-primary">
+        <div>
+            <img src="<%= blog.image %>" class="rounded ">
+            <span><%= blog.created.toDateString() %></span>
+            <p><%- blog.body %></p>
+
+        </div>
+        <button>
+        <a href="/blogs/<%= blog._id %>/edit">
+            Edit
+        </a>
+         </button>
+        <form action="/blogs/<%= blog._id %>?_method=DELETE"  method="POST">
+            <button>
+                Delete
+            </button>
+        </form>
+    
+
+
+    </div>
+</div>
+
+
+<%- include('./partials/footer') %>

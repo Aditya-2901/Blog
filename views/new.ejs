@@ -1,0 +1,17 @@
+<%- include('./partials/header') %>
+<div class="  container ">
+    <div class="jumbotron">
+        <h3>
+            New Post
+        </h3>
+    </div>
+    <form action="/blogs" method=POST>
+       <div> <input type="text" class="form-control"         name="blog[title]"  placeholder="Title"></div><br>
+        <div><input type="text" class="form-control"         name="blog[image]"  placeholder="Image Url"></div><br>
+         <div> <textarea type= "text"  class="form-control"  name="blog[body]"  > </textarea></div>
+        <button>
+            Sumbit
+        </button>
+    </form>
+</div>
+<%- include('./partials/footer') %>
